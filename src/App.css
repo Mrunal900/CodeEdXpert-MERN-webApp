@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0F0F0F; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: rgb(26,65,201); */
+  /* background: radial-gradient(circle, rgba(26,65,201,1) 0%, rgba(15,15,15,1) 87%); */
+  border-radius: 20px;
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: rgb(31,81,255);
+  background: radial-gradient(circle, rgba(31,81,255,1) 0%, rgba(15,15,15,1) 87%);  */
+  background: rgb(185, 185, 185);
+}
+
+/* spinner/loader */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#766DF4 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#766DF4);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:spinner 1s infinite linear;
+}
+
+@keyframes spinner{ 
+  100%{transform: rotate(1turn)}
+}
+
+.loader {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  box-sizing: border-box;
+}
+.loader::before {
+  content: '';  
+  position: absolute;
+  right: 68px;
+  bottom: 10px;
+  height: 24px;
+  width: 7px;
+  outline: 1px solid #FFF;
+  color: #0022ff;
+  box-sizing: border-box;
+  animation: animloader1 1s linear infinite alternate;
+}
+.loader::after {
+  content: '';  
+  width: 4px;
+  height: 4px;
+  background: #0022ff;
+  position: absolute;
+  right: 70px;
+  top: 8px;
+  box-sizing: border-box;
+  animation: animloader 1s ease-out infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    top: 8px;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(180deg) scale(1.5);
+  }
+}
+
+@keyframes animloader1 {
+  0% {
+    box-shadow: 0 0 inset;
+  }
+  100% {
+    box-shadow: 0 -28px inset;
+  }
+}
+
+
+
+
+ 
+.home-bg {
+    background-image: linear-gradient(to bottom, #01060d, #000e25, #00133b, #00134f, #1c0a5f);
+}
+
+.home-bg2 {
+  background-image: linear-gradient(to top, #0f0f0f, #131027, #11103f, #0b0d56, #02056e);
+}
+
+
+.auth-bg {
+  /* background-image: linear-gradient(to bottom, #02056e, #000c55, #040c3b, #090622, #000001); */
+  /* background-image: url('../src/assets/patterns/nasa-Q1p7bh3SHj8-unsplash.jpg'); */
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-size: cover;
+}
+
+.contact-bg {
+  /* background-image: linear-gradient(to bottom, #02056e, #000c55, #040c3b, #090622, #000001); */
+  background-image: url('../src/assets/patterns/model.jpg');
+  background-size: cover;
+}
+
+.line {
+  background: rgb(0, 8, 255);
+  background: radial-gradient(circle, rgb(0, 8, 255) 0%, rgba(15,15,15,1) 75%);
+}
+
+.fline {
+  background: rgb(0, 8, 255);
+  background: radial-gradient(circle, rgb(0, 8, 255) 0%, rgb(0, 0, 0) 75%);
+}
+
+.bg-shadow {
+    box-shadow: 10px 10px 53px -16px rgba(12,136,245,1);
+}
+
+.codeblock1 {
+    width: 372.95px;
+    height: 257.05px;
+    border-radius: 100%;
+    left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px);
+    background: linear-gradient(
+      123.77deg,
+      #8a2be2 -6.46%,
+      #ffa500 59.04%,
+      #f8f8ff 124.53%
+    );
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
+  }
+
+  .codeblock2 {
+    position: absolute;
+    width: 372.95px;
+    height: 257.05px;
+    left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px);
+    border-radius: 100%;
+    background: linear-gradient(
+      118.19deg,
+      #1fa2ff -3.62%,
+      #12d8fa 50.44%,
+      #a6ffcb 104.51%
+    );
+    opacity: 0.2;
+    filter: blur(34px);
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
+  }
+
+  .fade-in {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+
+  @keyframes myAnim {
+    0% {
+      opacity: 0;
+      transform: translateX(250px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
